@@ -1,4 +1,4 @@
-# ArchieRFID
+# ArchiRFID
 
 Este proyecto se centra en la lectura de tarjetas RFID de 125 kHz, una tecnología que permite identificar el acceso de las personas , ofrecer la posibilidad de monitorear puestos de trabajo, optimizando la gestión de recursos y mejorando la seguridad en diversos entornos. 
 
