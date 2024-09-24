@@ -1,13 +1,34 @@
-# ArchiRFID
+<h1>ArchiRFID</h1>
 
-Este proyecto se centra en la lectura de tarjetas RFID de 125 kHz, una tecnología que permite identificar el acceso de las personas , ofrecer la posibilidad de monitorear puestos de trabajo, optimizando la gestión de recursos y mejorando la seguridad en diversos entornos. 
+Este proyecto se enfoca en la lectura de tarjetas RFID de 125 kHz, una tecnología que permite la identificación de personas y ofrece la posibilidad de monitorear puestos de trabajo, optimizando la gestión de recursos y mejorando la seguridad en diversos entornos.
 
-<h1>Descripcion del proyecto </h1>
+![imagen](Img\Dispositivo.jpg)
 
-El sistema se enfoca en la adquisición de datos de las tarjetas RFID a través de  puerto serial. Una vez capturada la información, esta puede ser adaptada para diversas aplicaciones. En nuestro caso, hemos implementado este sistema para identificar y validar la presencia de personal autorizados en puestos de trabajo específicos, garantizando así un control y una trazabilidad.
+<h2>Descripción del proyecto</h2>
 
-Un sistema de RFID  funciona mediante un proceso directo. En este contexto, el módulo RFID genera una frecuencia portadora de 125 kHz. Cuando una tarjeta RFID se acerca al módulo, se establece una interacción entre la bobina del dispositivo y la tarjeta. Esta interacción crea un campo magnético que energiza la tarjeta, permitiendo que su chip interno responda. Una vez activada, la tarjeta emite una señal que contiene información codificada.La señal emitida es una señal analógica modulada, la cual es recibida por el integrado interno (U2270B) del lector RFID a través de su antena. Este integrado convierte la señal en datos digitales utilizando un método de codificación conocido como codificación Manchester. Posteriormente, el microcontrolador realiza el proceso de decodificación de la señal, teniendo en cuenta la base de tiempo de espera en relación con la señal. Una vez completada la decodificación, se obtienen los bits necesarios para interpretar el número de la tarjeta.
+El sistema está diseñado para la adquisición de datos de las tarjetas RFID a través del puerto serial. Una vez capturada la información, esta puede adaptarse a diversas aplicaciones. En nuestro caso, hemos implementado el sistema para identificar y validar la presencia de personal autorizado en puestos de trabajo específicos, garantizando un control de trazabilidad de los equipos.
 
-Las tarjetas en este caso son de 39 bits, estan compuesta con 15 bits de paridad y 24 bits de datos donde proviene el numero de la tarjeta, el microcontrolador traduce la señal por paquetes y hace el cambio de base binario a base hexadecimal.
+![imagen3](Img\software_Traza.png)
 
-![Group 4](https://github.com/user-attachments/assets/04e1c3cc-3a03-4207-9d2f-2c8c5ad525b5)
+<h2>Especificaciónes técnicas </h2>
+
+El funcionamiento de un sistema RFID es un proceso directo. El módulo RFID emite una frecuencia portadora de 125 kHz. Cuando una tarjeta RFID se aproxima al módulo, se establece una interacción entre la bobina del dispositivo y la tarjeta. Esta interacción crea un campo magnético que energiza la tarjeta, permitiendo que su chip interno responda. Al activarse, se emite una señal que contiene información codificada.
+
+La señal emitida es analógica y modulada, siendo recibida por el integrado interno (U2270B) del lector RFID a través de su antena. Este integrado convierte la señal en datos digitales utilizando la codificación Manchester. Posteriormente, el microcontrolador decodifica la señal, basándose en un tiempo de espera para interpretar la señal correctamente. Una vez completada la decodificación, se extraen los bits necesarios para interpretar el número de la tarjeta.
+
+Las tarjetas que se utilizan en este proyecto son de 39 bits, compuestos por 15 bits de paridad y 24 bits de datos, que corresponden al número de la tarjeta. El microcontrolador traduce la señal en paquetes y convierte los datos de binario a hexadecimal.
+
+![imagen2](Img\Tarjetas.png)
+
+Según el datasheet del U2270B, existen diversas configuraciones que dependen del rango de detección del lector. Para cada una de estas configuraciones, es importante tener en cuenta que la salida (Pin 2) del integrado es de tipo colector abierto, lo que requiere una resistencia pull-up conectada a la fuente de alimentación (ya sea de 5V o 3.3V, según el microcontrolador utilizado). Para alimentacion externa se utilizó el modulo regulable LM317.
+
+<h2>Esquema de conexión</h2>
+
+A continuación, se presenta el esquema de conexiones. En este caso, estamos utilizando GP18 (RFID_OUT) para llevar a cabo la decodificación Manchester.
+
+![imagen4](Img\Esquema.png)
+
+<h2>Link Útiles</h2>
+
+- [Archi](https://archikids.com.ar/)
+- [Datasheet U2270B](https://www.farnell.com/datasheets/94393.pdf)
