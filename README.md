@@ -26,7 +26,8 @@ Según el datasheet del U2270B, existen diversas configuraciones que dependen de
 
 A continuación, se presenta el esquema de conexiones. En este caso, estamos utilizando GP18 (RFID_OUT) para llevar a cabo la decodificación Manchester.
 
-![Esquema](https://github.com/user-attachments/assets/ae0e92bc-6903-4984-9db3-056fecd018d6)
+![EsquemaRFID](https://github.com/user-attachments/assets/4c9f6bc3-1960-4ea7-94b2-a67a3d547724)
+
 
 <h2>Link Útiles</h2>
 
