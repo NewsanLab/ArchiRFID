@@ -1,14 +1,14 @@
 <h1>ArchiRFID</h1>
 
 Este proyecto se enfoca en la lectura de tarjetas RFID de 125 kHz, una tecnología que permite la identificación de personas y ofrece la posibilidad de monitorear puestos de trabajo, optimizando la gestión de recursos y mejorando la seguridad en diversos entornos.
+![Dispositivo](https://github.com/user-attachments/assets/ac94115c-2ae0-4c97-981d-bc202c954b77)
 
-![imagen](Img\Dispositivo.jpg)
 
 <h2>Descripción del proyecto</h2>
 
 El sistema está diseñado para la adquisición de datos de las tarjetas RFID a través del puerto serial. Una vez capturada la información, esta puede adaptarse a diversas aplicaciones. En nuestro caso, hemos implementado el sistema para identificar y validar la presencia de personal autorizado en puestos de trabajo específicos, garantizando un control de trazabilidad de los equipos.
 
-![imagen3](Img\software_Traza.png)
+![software_Traza](https://github.com/user-attachments/assets/7ae8714a-2ff4-4ccf-ae1d-4ff445f73ddc)
 
 <h2>Especificaciónes técnicas </h2>
 
@@ -18,7 +18,7 @@ La señal emitida es analógica y modulada, siendo recibida por el integrado int
 
 Las tarjetas que se utilizan en este proyecto son de 39 bits, compuestos por 15 bits de paridad y 24 bits de datos, que corresponden al número de la tarjeta. El microcontrolador traduce la señal en paquetes y convierte los datos de binario a hexadecimal.
 
-![imagen2](Img\Tarjetas.png)
+![Tarjetas](https://github.com/user-attachments/assets/82ef57ea-9a2f-4d34-a169-16970ca9f5b9)
 
 Según el datasheet del U2270B, existen diversas configuraciones que dependen del rango de detección del lector. Para cada una de estas configuraciones, es importante tener en cuenta que la salida (Pin 2) del integrado es de tipo colector abierto, lo que requiere una resistencia pull-up conectada a la fuente de alimentación (ya sea de 5V o 3.3V, según el microcontrolador utilizado). Para alimentacion externa se utilizó el modulo regulable LM317.
 
@@ -26,7 +26,7 @@ Según el datasheet del U2270B, existen diversas configuraciones que dependen de
 
 A continuación, se presenta el esquema de conexiones. En este caso, estamos utilizando GP18 (RFID_OUT) para llevar a cabo la decodificación Manchester.
 
-![imagen4](Img\Esquema.png)
+![Esquema](https://github.com/user-attachments/assets/ae0e92bc-6903-4984-9db3-056fecd018d6)
 
 <h2>Link Útiles</h2>
 
