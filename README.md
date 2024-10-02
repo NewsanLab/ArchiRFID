@@ -8,8 +8,6 @@ Este proyecto se enfoca en la lectura de tarjetas RFID de 125 kHz, una tecnolog�
 
 El sistema está diseñado para la adquisición de datos de las tarjetas RFID a través del puerto serial. Una vez capturada la información, esta puede adaptarse a diversas aplicaciones. En nuestro caso, hemos implementado el sistema para identificar y validar la presencia de personal autorizado en puestos de trabajo específicos, garantizando un control de trazabilidad de los equipos.
 
-![software_Traza](https://github.com/user-attachments/assets/7ae8714a-2ff4-4ccf-ae1d-4ff445f73ddc)
-
 <h2>Especificaciónes técnicas </h2>
 
 El funcionamiento de un sistema RFID es un proceso directo. El módulo RFID emite una frecuencia portadora de 125 kHz. Cuando una tarjeta RFID se aproxima al módulo, se establece una interacción entre la bobina del dispositivo y la tarjeta. Esta interacción crea un campo magnético que energiza la tarjeta, permitiendo que su chip interno responda. Al activarse, se emite una señal que contiene información codificada.
