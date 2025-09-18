@@ -5,6 +5,7 @@ Este proyecto se enfoca en la lectura de tarjetas RFID de 125 kHz, una tecnolog�
 
 ![Dispositivo](https://github.com/user-attachments/assets/ac94115c-2ae0-4c97-981d-bc202c954b77)
 <h2>ArchiRFID V2.0</h2>
+
 ![Dispositivo](Img/Dispositivo2.0.jpeg)
 
 
@@ -16,7 +17,14 @@ El sistema está diseñado para la adquisición de datos de las tarjetas RFID a 
 
 El funcionamiento de un sistema RFID es un proceso directo. El módulo RFID emite una frecuencia portadora de 125 kHz. Cuando una tarjeta RFID se aproxima al módulo, se establece una interacción entre la bobina del dispositivo y la tarjeta. Esta interacción crea un campo magnético que energiza la tarjeta, permitiendo que su chip interno responda. Al activarse, se emite una señal que contiene información codificada.
 
+<h3>Version 1.0</h3>
+
 La señal emitida es analógica y modulada, siendo recibida por el integrado interno (U2270B) del lector RFID a través de su antena. Este integrado convierte la señal en datos digitales utilizando la codificación Manchester. Posteriormente, el microcontrolador decodifica la señal, basándose en un tiempo de espera para interpretar la señal correctamente. Una vez completada la decodificación, se extraen los bits necesarios para interpretar el número de la tarjeta.
+
+<h3>Version 2.0</h3>
+
+La versión 2.0 incorpora el módulo RDM6300, el cual se conecta a la placa ARCHINET a través de su salida de transmisión UART. Esta conexión permite la interacción con el número de tarjeta y la obtención del nombre de la persona a través de un servicio MQTT. Cabe destacar que el módulo RDM6300, al incluir un microcontrolador, se encarga de toda la decodificación que previamente realizaba el u2270B.
+
 
 Las tarjetas que se utilizan en este proyecto son de 39 bits, compuestos por 15 bits de paridad y 24 bits de datos, que corresponden al número de la tarjeta. El microcontrolador traduce la señal en paquetes y convierte los datos de binario a hexadecimal.
 
@@ -26,10 +34,20 @@ Según el datasheet del U2270B, existen diversas configuraciones que dependen de
 
 <h2>Esquema de conexión</h2>
 
+<h3>Version 1.0</h3>
 A continuación, se presenta el esquema de conexiones. En este caso, estamos utilizando GP18 (RFID_OUT) para llevar a cabo la decodificación Manchester.
 
 ![EsquemaRFID](https://github.com/user-attachments/assets/4c9f6bc3-1960-4ea7-94b2-a67a3d547724)
 
+<h3>Version 2.0</h3>
+
+A continuación, se presenta la incorporación del modulo RDM6300 en la ArchiNET.
+
+![EsquemaRFID2.0](Img/RFIDV2.JPG)
+
+<h2>Muestra</h2>
+
+![VideoRFID2.0](Img/test.mp4.gif)
 
 <h2>Link Útiles</h2>
 
