@@ -1,6 +1,9 @@
 <h1>ArchiRFID</h1>
 
 Este proyecto se enfoca en la lectura de tarjetas RFID de 125 kHz, una tecnología que permite la identificación de personas y ofrece la posibilidad de monitorear puestos de trabajo, optimizando la gestión de recursos y mejorando la seguridad en diversos entornos.
+
+![VideoRFID2.0](Img/test.mp4.gif)
+
 <h2>ArchiRFID V1.0</h2>
 
 ![Dispositivo](https://github.com/user-attachments/assets/ac94115c-2ae0-4c97-981d-bc202c954b77)
@@ -45,9 +48,7 @@ A continuación, se presenta la incorporación del modulo RDM6300 en la ArchiNET
 
 ![EsquemaRFID2.0](Img/RFIDV2.JPG)
 
-<h2>Muestra</h2>
 
-![VideoRFID2.0](Img/test.mp4.gif)
 
 <h2>Link Útiles</h2>
 
