@@ -137,8 +137,8 @@ print(" IP:", eth.pretty_ip(eth.ip_address))
 
 BROKER_HOST = "---------" #colocar IP del broker
 BROKER_PORT = 9999 #colocar puerto del broker
-PUB_TOPIC = "PLANTA3/EXPENDEDORA/ARCHINET00/RFID"
-SUB_TOPIC = "PLANTA3/EXPENDEDORA/ARCHINET00/OPERARIO"
+PUB_TOPIC = ""
+SUB_TOPIC = ""
 
 def connected(client, userdata, flags, rc):
     print(f" Conectado a {BROKER_HOST}")
